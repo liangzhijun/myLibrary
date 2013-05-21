@@ -224,20 +224,22 @@ public class BookDao
 	 * 从数据库遍历书籍，检索。返回一本书籍的信息
 	 * @return
 	 */
-	public static Book retrieval(String strText, String strSearchType)
+	public static List<Book> retrieval(String strText, String strSearchType)
 	{
 		ResultSet rs = null;
 		Statement stmt = null;
-		Book book = new Book();
+		List<Book> list = new ArrayList<Book>();
+		
 			
 		try
 		{
 			stmt = conn.createStatement();
-			rs = stmt.executeQuery("select * from library WHERE " + strSearchType + " ='" + strText + "'");
+			rs = stmt.executeQuery("select * from library WHERE " + strSearchType + " LIKE '" + "%" + strText + "%" + "'");
 
-			if(rs.next())
+			while(rs.next())
 			{
 				// 从数据库遍历书籍	
+				Book book = new Book();
 				
 				book.setTitle(rs.getString("title"));
 				book.setAuthor(rs.getString("author"));
@@ -252,8 +254,10 @@ public class BookDao
 				book.setBarcode(rs.getString("barcode"));
 				book.setCondition(rs.getString("condition"));
 				
-				return book;
-			}		
+				list.add(book);;
+			}
+			
+			return list;
 		}
 		catch (SQLException e)
 		{
@@ -286,7 +290,7 @@ public class BookDao
 	}
 	
 	/**
-	 * 从数据库遍历书籍，返回一本书籍的信息
+	 * 从数据库遍历书籍，返回一书目的数量、状态等信息
 	 * @return
 	 */
 	public static List<Book> bookinfos(String title)
