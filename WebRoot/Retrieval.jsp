@@ -28,6 +28,8 @@ body {
 		if(strText.value.length == 0)
 		{
 			alert("[ 查询内容 ]不能为空");
+			
+			return false;
 		}
 		
 		return true;
@@ -74,8 +76,8 @@ body {
 
 	<div id="content">
 		<div id="searchmain" style="text-align:center;">
-			<form action="Retrieval" method="get" name="f"
-				onsubmit="return chkForm()" id="f">
+			<form action="Retrieval" method="get" 
+				onsubmit="return chkForm()" >
 				<div>
 					<div id="saerch_center">
 						<h3>馆藏书目简单检索</h3>

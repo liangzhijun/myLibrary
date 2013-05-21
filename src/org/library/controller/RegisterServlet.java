@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.library.dao.UserDao;
 import org.library.model.User;
 import org.library.service.UserService;
 

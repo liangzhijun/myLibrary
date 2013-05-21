@@ -5,8 +5,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class UriDao
 {
@@ -28,12 +28,12 @@ public class UriDao
 		}
 	}
 	
-	public static Set<String> findAll()
+	public static Map<String, String> findAll()
 	{
 		ResultSet rs = null;
 		Statement stmt = null;
 		
-		Set<String> set = new HashSet<String>();
+		Map<String, String> map = new HashMap<String, String>();
 		
 		try
 		{
@@ -42,10 +42,10 @@ public class UriDao
 
 			while (rs.next())
 			{
-				set.add(rs.getString("URI"));
+				map.put(rs.getString("URI"), rs.getString("role"));
 			}
 			
-			return set;
+			return map;
 		}
 		catch (SQLException e)
 		{

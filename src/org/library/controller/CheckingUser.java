@@ -26,8 +26,15 @@ public class CheckingUser extends HttpServlet
 		{
 			HttpSession session = request.getSession();
 			session.setAttribute("user", user);
-
-			response.sendRedirect("myLibrary");
+			
+			if(user.getRole().equals("student"))
+			{
+				response.sendRedirect("myLibrary");
+			}		
+			else
+			{
+				response.sendRedirect("adminLibrary.jsp");
+			}	
 		}
 
 		else

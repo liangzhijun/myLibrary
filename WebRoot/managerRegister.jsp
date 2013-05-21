@@ -68,7 +68,7 @@ body {
   					result += "用户名长度应该是4和10之间！";
   				}
   				
-  				if(password.value.length < 6 || password.value.length > 10)
+  				if(password.value.length < 4 || password.value.length > 10)
   				{
   					result += "密码长度应该是4和10之间！";
   				} 
@@ -117,12 +117,12 @@ body {
           		
           		<tr>
             		<td align="left">密   码 </td>
-            		<td align="left"><input class="input" type="text" name="password" size="20" style="width:200px"></td>
+            		<td align="left"><input class="input" type="password" name="password" size="20" style="width:200px"></td>
           		</tr>
           		
           		<tr>
             		<td align="left">确认密码 </td>
-            		<td align="left"><input class="input" type="text" name="repassword" size="20" style="width:200px"></td>
+            		<td align="left"><input class="input" type="password" name="repassword" size="20" style="width:200px"></td>
           		</tr>
           		
           		<tr>

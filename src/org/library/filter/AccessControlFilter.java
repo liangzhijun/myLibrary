@@ -1,7 +1,7 @@
 package org.library.filter;
 
 import java.io.IOException;
-import java.util.Set;
+import java.util.Map;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -16,9 +16,9 @@ import javax.servlet.http.HttpSession;
 import org.library.dao.UriDao;
 import org.library.model.User;
 
-public class LoginFilter implements Filter
+public class AccessControlFilter implements Filter
 {
-	private Set<String> uris;
+	private Map<String, String> uris;
 
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException
@@ -35,25 +35,42 @@ public class LoginFilter implements Filter
 		
 		String requestURI = req.getRequestURI();
 		
+		
 		HttpSession session = req.getSession();
 		
-		if(!uris.contains(requestURI))
+		//无需验证的URI
+		if(!uris.containsKey(requestURI))
 		{
-			chain.doFilter(request,response);return;		//do not need to check
-			
+			chain.doFilter(request,response);
+			return;										//do not need to check
 		}
 		
-		//need to check
+		//需验证的URI
 		User user = (User)session.getAttribute("user");
 		
-		if(user != null)
-		{
-			chain.doFilter(request,response);return;		//已登录,允许通过
-			
-		}	
 
-		//重新登录
-		((HttpServletResponse)response).sendRedirect("SignIn.jsp");
+		//登录验证
+		if(user == null)
+		{
+			//重新登录
+			((HttpServletResponse)response).sendRedirect("SignIn.jsp");
+			return;
+		}	
+		
+		//已登录，角色验证
+		String role = uris.get(requestURI);	
+		String userRole = user.getRole();
+		
+		if(!role.equals(userRole))
+		{
+			//重新登录
+			((HttpServletResponse)response).sendRedirect("SignIn.jsp");
+			return;
+		}
+		
+		//验证通过
+		chain.doFilter(request,response);		
+		
 	}
 
 	@Override

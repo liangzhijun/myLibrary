@@ -41,11 +41,11 @@ body {
 						</li>
 						<li><a href="#contact">新书通报</a>
 						</li>
-						<li><a href="http://localhost:8080/MyLibrary/Library.jsp" target= "_blank">图书目库</a>
+						<li><a href="http://localhost:8080/MyLibrary/Library.jsp">图书目库</a>
 						</li>
 						<li><a href="#about">读者荐购</a>
 						</li>
-						<li><a href="http://localhost:8080/MyLibrary/myLibrary" target= "_blank">我的图书馆</a>
+						<li><a href="http://localhost:8080/MyLibrary/myLibrary">我的图书馆</a>
 						</li>
 					</ul>
 				</div>
@@ -66,7 +66,7 @@ body {
   		确认密码<input type="password" name="repassword"> <br>
   		
   		<input class="btn btn-primary" type="submit" value="修 改">&nbsp;&nbsp;&nbsp;&nbsp;
-  		<a class="btn" href="http://localhost:8080/MyLibrary/myLibrary.jsp" target= "_blank">返回</a>
+  		<a class="btn" href="http://localhost:8080/MyLibrary/myLibrary.jsp">返回</a>
   		</form>
 
 		</div>

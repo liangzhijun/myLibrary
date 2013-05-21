@@ -36,10 +36,10 @@ body {
 						<li ><a href="http://localhost:8080/MyLibrary/Retrieval.jsp">书目检索</a></li>
 						<li><a href="#about">分类浏览</a></li>
 						<li><a href="#about">期刊导航</a></li>
-						<li><a href="#contact">新书通报</a></li>
+						<li><a href="#contact">修改图书</a></li>
 						<li><a href="http://localhost:8080/MyLibrary/Library.jsp">图书目库</a></li>
-						<li><a href="#about">读者荐购</a></li>
-						<li><a href="http://localhost:8080/MyLibrary/myLibrary">我的图书馆</a>
+						<li><a href="/MyLibrary/booksEntering.jsp">图书录入</a></li>
+						<li><a href="/MyLibrary/adminLibrary">个人资料</a>
 						</li>
 					</ul>
 				</div>
@@ -111,7 +111,7 @@ body {
 				</tbody>
 			</table>
 
-		</div>
+			</div>
 
 		</div>
 </body>

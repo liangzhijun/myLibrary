@@ -82,6 +82,8 @@ public class ManagerRegister extends HttpServlet
 			user.setUnit(unit);
 			user.setPhone(phone);
 			
+			
+			
 			UserDao.saveUser(user);//将元素存入数据库
 			
 			out.println("<html><head><title>Login Result</title></head>");

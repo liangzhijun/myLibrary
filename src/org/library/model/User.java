@@ -14,7 +14,16 @@ public class User
 	private String address;
 	private String idCare;
 	private String type;
+	private String role;
 	
+	public String getRole()
+	{
+		return role;
+	}
+	public void setRole(String role)
+	{
+		this.role = role;
+	}
 	public String getTime()
 	{
 		return time;

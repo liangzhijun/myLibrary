@@ -42,7 +42,7 @@ public class UserDao
 		{
 
 			pstmt = conn
-					.prepareStatement("insert into user values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+					.prepareStatement("insert into user values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
 			pstmt.setString(1, user.getUsername());
 			pstmt.setString(2, user.getPassword());
@@ -52,8 +52,11 @@ public class UserDao
 			pstmt.setString(6, user.getUnit());
 			pstmt.setString(7, user.getPhone());
 			pstmt.setString(8, new java.util.Date().toLocaleString());
-			pstmt.setString(9, "榕六302");
-			pstmt.setString(10, "本科生");
+			pstmt.setString(9, "");
+			pstmt.setString(10, "榕六302");
+			pstmt.setString(11, "2000030536");
+			pstmt.setString(12, "本科生");
+			pstmt.setString(13, "student");
 			
 			
 			pstmt.executeUpdate();
@@ -118,6 +121,7 @@ public class UserDao
 					user.setIdCare(rs.getString("idCare"));
 					user.setType(rs.getString("type"));
 					user.setTime(rs.getString("date"));
+					user.setRole(rs.getString("role"));
 					
 					return user;
 				}
