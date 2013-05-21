@@ -13,7 +13,7 @@ import org.library.model.Book;
 
 public class booksEntering extends HttpServlet
 {
-	public void doGet(HttpServletRequest req, HttpServletResponse resp)
+	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException
 	{
 		String title = req.getParameter("title");
@@ -118,12 +118,6 @@ public class booksEntering extends HttpServlet
 		}
 			
 		
-	}
-
-	public void doPost(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException
-	{
-		this.doGet(req, resp);
 	}
 
 }

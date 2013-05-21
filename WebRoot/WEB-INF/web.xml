@@ -41,7 +41,7 @@
   </servlet>
   <servlet>
     <servlet-name>Retrieval</servlet-name>
-    <servlet-class>org.library.controller.Retrieval</servlet-class>
+    <servlet-class>org.library.controller.SearchBookServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>myLibrary</servlet-name>

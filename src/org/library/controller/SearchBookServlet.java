@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.library.dao.BookDao;
 import org.library.model.Book;
 
-public class Retrieval extends HttpServlet
+public class SearchBookServlet extends HttpServlet
 {
 	
 	@Override
@@ -24,9 +24,9 @@ public class Retrieval extends HttpServlet
 		String strText = req.getParameter("strText");
 		String strSearchType = req.getParameter("strSearchType");
 		
-		Book book = BookDao.retrieval(strText, strSearchType);
+		List<Book> bookList = BookDao.retrieval(strText, strSearchType);
 		
-		if(book == null)
+		if(bookList == null)
 		{
 			resp.setContentType("text/html; charset=utf-8");
 			PrintWriter out = resp.getWriter();
@@ -41,12 +41,9 @@ public class Retrieval extends HttpServlet
 		
 		else
 		{
-			req.setAttribute("book", book);
+			req.setAttribute("bookList", bookList);
 			
-			List<Book> list =  BookDao.bookinfos(book.getTitle());
-			req.setAttribute("list", list);
-			
-			RequestDispatcher rd = req.getRequestDispatcher("bookinfo.jsp");
+			RequestDispatcher rd = req.getRequestDispatcher("/SearchResult.jsp");
 			rd.forward(req, resp);	
 		}	
 	}

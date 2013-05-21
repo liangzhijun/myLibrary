@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.library.dao.UserDao;
 import org.library.model.User;
+import org.library.service.UserService;
 
 public class RegisterServlet extends HttpServlet
 {
@@ -82,7 +83,7 @@ public class RegisterServlet extends HttpServlet
 			user.setUnit(unit);
 			user.setPhone(phone);
 			
-			UserDao.saveUser(user);//将元素存入数据库
+			UserService.register(user);//注册
 			
 			out.println("<html><head><title>Login Result</title></head>");
 
