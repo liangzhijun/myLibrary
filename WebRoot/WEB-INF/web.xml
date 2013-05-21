@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name></display-name>
+	
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>org.library.filter.LoginFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>org.library.controller.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CheckingUser</servlet-name>
+		<servlet-class>org.library.controller.CheckingUser</servlet-class>
+	</servlet>
+  <servlet>
+    <servlet-name>ChangePasswd</servlet-name>
+    <servlet-class>org.library.controller.ChangePasswd</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>modifyuserinfo</servlet-name>
+    <servlet-class>org.library.controller.modifyuserinfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>booksEntering</servlet-name>
+    <servlet-class>org.library.controller.booksEntering</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BookinfoServlet</servlet-name>
+    <servlet-class>org.library.controller.BookinfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Retrieval</servlet-name>
+    <servlet-class>org.library.controller.Retrieval</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>myLibrary</servlet-name>
+    <servlet-class>org.library.controller.myLibrary</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ManagerRegister</servlet-name>
+    <servlet-class>org.library.controller.ManagerRegister</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/RegisterServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CheckingUser</servlet-name>
+		<url-pattern>/CheckingUser</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangePasswd</servlet-name>
+    <url-pattern>/ChangePasswd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>modifyuserinfo</servlet-name>
+    <url-pattern>/modifyuserinfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>booksEntering</servlet-name>
+    <url-pattern>/booksEntering</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookinfoServlet</servlet-name>
+    <url-pattern>/BookinfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Retrieval</servlet-name>
+    <url-pattern>/Retrieval</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>myLibrary</servlet-name>
+    <url-pattern>/myLibrary</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerRegister</servlet-name>
+    <url-pattern>/ManagerRegister</url-pattern>
+  </servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
