@@ -169,17 +169,16 @@ public class UserDao
 
 		try
 		{
-			stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
-					ResultSet.CONCUR_UPDATABLE);
+			stmt = conn.createStatement( ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+			
 			rs = stmt.executeQuery("select * from user WHERE username='" + myUsername + "'");
 
-			while (rs.next())
-			{		
-				//更新一行数据
-				rs.updateString("password", newPassword);
-				rs.updateRow();
-			}
-
+			rs.next();
+				
+			//更新一行数据
+			rs.updateString("password", newPassword);
+			rs.updateRow();
+			
 		}
 		catch (SQLException e)
 		{
