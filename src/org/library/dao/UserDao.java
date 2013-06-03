@@ -53,10 +53,10 @@ public class UserDao
 			pstmt.setString(7, user.getPhone());
 			pstmt.setString(8, new java.util.Date().toLocaleString());
 			pstmt.setString(9, "");
-			pstmt.setString(10, "éÅÁù302");
+			pstmt.setString(10, "");
 			pstmt.setString(11, "2000030536");
 			pstmt.setString(12, "±¾¿ÆÉú");
-			pstmt.setString(13, "student");
+			pstmt.setString(13, user.getRole());
 			
 			
 			pstmt.executeUpdate();
