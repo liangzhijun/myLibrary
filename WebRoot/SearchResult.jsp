@@ -61,7 +61,7 @@ body {
 				<a class="brand">书目检索系统</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<li><a href="http://localhost:8080/MyLibrary/Retrieval.jsp">书目检索</a>
+						<li><a href="/Retrieval.jsp">书目检索</a>
 						</li>
 						<li><a href="#about">分类浏览</a>
 						</li>
@@ -69,11 +69,11 @@ body {
 						</li>
 						<li><a href="#contact">新书通报</a>
 						</li>
-						<li><a href="http://localhost:8080/MyLibrary/Library.jsp" target= "_blank">图书目库</a>
+						<li><a href="/getBooks.htm" >图书目库</a>
 						</li>
 						<li><a href="#about">读者荐购</a>
 						</li>
-						<li><a href="http://localhost:8080/MyLibrary/myLibrary" target= "_blank">我的图书馆</a>
+						<li><a href="/myLibrary.jsp" >我的图书馆</a>
 						</li>
 					</ul>
 				</div>
@@ -87,7 +87,7 @@ body {
 	<div id="content">
 	
 	<div>
-			<form action="Retrieval" onsubmit="return chkForm()" method="get">
+			<form action="/searchBooks.htm" method="get">
 				<p style="text-align:center; padding:10px;">检索： <select class="option" name="strSearchType" size="1" style="width:100px; font-size:16px; vertical-align:middle;">
 								<option value="title">题&nbsp;&nbsp;名</option>
 								<option value="author">责任者</option>

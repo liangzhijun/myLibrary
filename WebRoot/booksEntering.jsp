@@ -115,7 +115,7 @@ body {
 	<div class="container">
 		<h2 style="color: rgb(226, 106, 39)">大学图书馆书目录入系统</h2>
 		
-		<form class="form-signin" action="booksEntering" method="post">
+		<form class="form-signin" action="booksEntering.htm" method="post">
   	
   	<table width="95%" border="0" cellpadding="3" cellspacing="1">
           <caption>录入我的图书馆 书目信息  </caption>
@@ -149,7 +149,7 @@ body {
           
            <tr>
             <td align="right">载体形态项: </td>
-            <td align="left"><input class="input" type="text" name="page" size="20" style="width:300px"></td>
+            <td align="left"><input class="input" type="text" name="pages" size="20" style="width:300px"></td>
           </tr>
           
           <tr>
@@ -178,8 +178,8 @@ body {
           
           <tr>
             <td align="right">&nbsp;</td>
-            <td align="left"><input type="submit" value=" 提  交 "><input type="hidden" name="returnUrl" value="">&nbsp;&nbsp;
-            <input type="button" value=" 退  出 " onclick="javascript:location.href='get_pwd.php' ">			</td>
+            <td align="left"><input type="submit" value=" 提  交 ">&nbsp;&nbsp;
+            <input type="button" value=" 退  出 " onclick="javascript:location.href='/Signin.jsp' ">			</td>
 		  </tr>
 		 
         </tbody></table>

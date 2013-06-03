@@ -1,4 +1,4 @@
-package org.library.controller;
+package org.library.servletVersion;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import org.library.dao.UserDao;
 import org.library.model.User;
 
-public class modifyuserinfo extends HttpServlet
+public class ModifyUserinfo extends HttpServlet
 {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -28,6 +28,8 @@ public class modifyuserinfo extends HttpServlet
 		
 		String username = user.getUsername();
 		
+		resp.setContentType("text/html; charset=utf-8");
+		
 		UserDao.modifyUserinfo(username, mobilePhone, phone, address, email);
 		user.setMobilePhone(mobilePhone);
 		user.setPhone(phone);
@@ -35,7 +37,7 @@ public class modifyuserinfo extends HttpServlet
 		user.setEmail(email);
 		
 		
-		resp.setContentType("text/html; charset=utf-8");
+		
 
 		PrintWriter out = resp.getWriter();
 

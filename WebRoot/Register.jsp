@@ -106,7 +106,7 @@ body {
 	<div class="container">
 		<h2 style="color: rgb(226, 106, 39)">大学图书馆用户注册</h2>
 		
-		<form class="form-signin" onsubmit="return validate()" action="RegisterServlet" method="post">
+		<form class="form-signin" onsubmit="return validate()" action="register.htm" method="post">
   	
   		<table width="95%" border="0" cellpadding="0" cellspacing="1">
   		 <tbody>

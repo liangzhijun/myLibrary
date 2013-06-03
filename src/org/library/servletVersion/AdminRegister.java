@@ -1,4 +1,4 @@
-package org.library.controller;
+package org.library.servletVersion;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.library.dao.UserDao;
 import org.library.model.User;
-import org.library.service.UserService;
 
-public class RegisterServlet extends HttpServlet
+public class AdminRegister extends HttpServlet
 {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -82,12 +82,14 @@ public class RegisterServlet extends HttpServlet
 			user.setUnit(unit);
 			user.setPhone(phone);
 			
-			UserService.register(user);//注册
+			
+			
+			UserDao.saveUser(user);//将元素存入数据库
 			
 			out.println("<html><head><title>Login Result</title></head>");
 
 			out.println("<body><h1>注册成功</h1><br>");
-			out.println("<a href = 'http://localhost:8080/MyLibrary/SignIn.jsp' target= '_blank'>返回登录页面</a><br>");
+			out.println("<a href = '/SignIn.jsp' target= '_blank'>返回登录页面</a><br>");
 			
 			out.flush();
 		}

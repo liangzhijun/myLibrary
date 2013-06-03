@@ -2,6 +2,7 @@ package org.library.filter;
 
 import java.io.IOException;
 import java.util.Map;
+import java.util.Set;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -19,12 +20,14 @@ import org.library.model.User;
 public class AccessControlFilter implements Filter
 {
 	private Map<String, String> uris;
+	private Set<String> shareUris;
 
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException
 	{
 		System.out.println("Filter Started!");
-		uris = UriDao.findAll();
+		uris = UriDao.findAll();//返回一个包含所有以uri为key，role(角色)为value的map
+		shareUris = UriDao.findShareUris();
 	}
 
 	@Override
@@ -57,10 +60,19 @@ public class AccessControlFilter implements Filter
 			return;
 		}	
 		
-		//已登录，角色验证
-		String role = uris.get(requestURI);	
+		//无需验证用户角色的URI，URI是共享的
+		if(shareUris.contains(requestURI))
+		{	
+			//验证通过
+			System.out.println("Share-URI");
+			chain.doFilter(request,response);	
+			return;
+		}
+		
+		String role = uris.get(requestURI);	//方法返回请求uri相对role(角色)
 		String userRole = user.getRole();
 		
+		//已登录，角色验证
 		if(!role.equals(userRole))
 		{
 			//重新登录

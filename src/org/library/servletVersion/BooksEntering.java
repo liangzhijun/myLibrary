@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.library.dao.BookDao;
 import org.library.model.Book;
 
-public class booksEntering extends HttpServlet
+public class BooksEntering extends HttpServlet
 {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException

@@ -56,7 +56,7 @@ color: #cacaca;
 
 <body>
 
-		<form class="form-signin" action="CheckingUser" method="post">
+		<form class="form-signin" action="/checkingUser.htm" method="post">
 			<h2 class="form-signin-heading">登录我的图书馆</h2>
 			
 			<input type="text" class="input-block-level"placeholder="Username" name="username"> 
@@ -65,7 +65,7 @@ color: #cacaca;
 			
 			<button class="btn btn-large btn-primary" type="submit">Sign in</button>
 			
-			<a href = 'Register.jsp' target= '_blank' class="btn btn-large btn-primary">Register</a><br>
+			<a href = "/Register.jsp" target= "_blank" class="btn btn-large btn-primary">Register</a><br>
 		</form>
 
 

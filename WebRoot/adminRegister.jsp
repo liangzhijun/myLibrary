@@ -104,9 +104,9 @@ body {
 <body>
 
 	<div class="container">
-		<h2 style="color: rgb(226, 106, 39)">大学图书馆 管理员注册</h2>
+		<h2 style="color: rgb(226, 106, 39)">大学图书馆注册 管理员</h2>
 		
-		<form class="form-signin" onsubmit="return validate()" action="RegisterServlet" method="post">
+		<form class="form-signin" onsubmit="return validate()" action="adminRegister.htm" method="post">
   	
   		<table width="95%" border="0" cellpadding="0" cellspacing="1">
   		 <tbody>
@@ -149,7 +149,7 @@ body {
           		
           		<tr>
             		<td align="left">手机号码 </td>
-            		<td align="left"><input class="input" type="text" name="unit" size="20" style="width:200px"></td>
+            		<td align="left"><input class="input" type="text" name="phone" size="20" style="width:200px"></td>
           		</tr>
   		 
   		 </tbody>

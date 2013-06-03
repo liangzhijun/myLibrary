@@ -65,15 +65,15 @@ clear: both;
 				<a class="brand">书目检索系统</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<li><a href="http://localhost:8080/MyLibrary/Retrieval.jsp">书目检索</a>
+						<li><a href="/Retrieval.jsp">书目检索</a>
 						</li>
 						<li><a href="#about">分类浏览</a></li>
 						<li><a href="#about">期刊导航</a></li>
 						<li><a href="#contact">新书通报</a></li>
-						<li><a href="http://localhost:8080/MyLibrary/Library.jsp"
+						<li><a href="/getBooks.htm"
 							>图书目库</a></li>
 						<li><a href="#about">读者荐购</a></li>
-						<li><a href="http://localhost:8080/MyLibrary/myLibrary"
+						<li><a href="/myLibrary"
 							>我的图书馆</a>
 						</li>
 					</ul>
@@ -84,7 +84,7 @@ clear: both;
 	</div>
 		
 		
-<form class="form-signin"  action="CheckingUser">
+<form class="form-signin"  action="checkingUser.htm">
 	<div id="content">
 		<div id="s_c_left">
 			<div class="itemtag">
@@ -143,7 +143,7 @@ clear: both;
 					</dl>
 					<dl class="booklist">
 						<dt>提要文摘附注:</dt>
-						<dd>本书通过对各种正确心理特征的阐述及错误心理的诠释, 帮助读者认清自己心理特征的正确与否, 调整心理误区。</dd>
+						<dd></dd>
 					</dl>
 
 				</div>

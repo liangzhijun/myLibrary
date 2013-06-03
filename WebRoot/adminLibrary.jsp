@@ -33,14 +33,13 @@ body {
 				<a class="brand">书目检索系统</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<li ><a href="http://localhost:8080/MyLibrary/Retrieval.jsp">书目检索</a></li>
+						<li ><a href="/Retrieval.jsp">书目检索</a></li>
 						<li><a href="#about">分类浏览</a></li>
 						<li><a href="#about">期刊导航</a></li>
 						<li><a href="#contact">修改图书</a></li>
-						<li><a href="http://localhost:8080/MyLibrary/Library.jsp">图书目库</a></li>
-						<li><a href="/MyLibrary/booksEntering.jsp">图书录入</a></li>
-						<li><a href="/MyLibrary/adminLibrary">个人资料</a>
-						</li>
+						<li><a href="/getBooks.htm">图书目库</a></li>
+						<li><a href="/booksEntering.jsp">图书录入</a></li>
+						<li><a href="/adminLibrary.jsp">个人资料</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
@@ -97,12 +96,12 @@ body {
 					<tr>
 						<td colspan="3" align="right">
 						
-						<a href = "http://localhost:8080/MyLibrary/change_passwd.jsp" target= "_blank">
+						<a href = "/change_passwd.jsp" >
 						<input type="button"
 							class="select" value="修改个人密码"> 
 						</a>
 	
-						<a href = "http://localhost:8080/MyLibrary/modifyuserinfo.jsp" target= "_blank">
+						<a href = "/modifyuserinfo.jsp" >
 						<input type="button"
 							class="select" value="修改联系信息"> 
 						</a>

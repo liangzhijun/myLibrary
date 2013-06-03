@@ -33,7 +33,7 @@ body {
 				<a class="brand">书目检索系统</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<li><a href="http://localhost:8080/MyLibrary/Retrieval.jsp">书目检索</a>
+						<li><a href="/Retrieval.jsp">书目检索</a>
 						</li>
 						<li><a href="#about">分类浏览</a>
 						</li>
@@ -41,11 +41,11 @@ body {
 						</li>
 						<li><a href="#contact">新书通报</a>
 						</li>
-						<li><a href="http://localhost:8080/MyLibrary/Library.jsp">图书目库</a>
+						<li><a href="/getBooks.htm">图书目库</a>
 						</li>
 						<li><a href="#about">读者荐购</a>
 						</li>
-						<li><a href="http://localhost:8080/MyLibrary/myLibrary">我的图书馆</a>
+						<li><a href="/myLibrary">我的图书馆</a>
 						</li>
 					</ul>
 				</div>
@@ -59,7 +59,7 @@ body {
 	
 		<h3 style="color: rgb(226, 106, 39)">修改个人信息</h3>
 		
-		<form class="form-signin" action="modifyuserinfo" method="post">
+		<form class="form-signin" action="/modifyUserinfo.htm" method="post">
   	
   	  	手机： <input type="text" name="mobilePhone" value="${
 							sessionScope.user.mobilePhone}"> <br>
@@ -71,7 +71,7 @@ body {
 							sessionScope.user.email}"> <br>
   		
   		<input class="btn btn-primary" type="submit" value="保存">&nbsp;&nbsp;&nbsp;&nbsp;
-  		<a class="btn btn-primary" href="http://localhost:8080/MyLibrary/myLibrary.jsp" target= "_blank">取消</a>
+  		<a class="btn btn-primary" href="/myLibrary.jsp" >取消</a>
   		
   		</form>
 

@@ -41,11 +41,11 @@ body {
 						</li>
 						<li><a href="#contact">新书通报</a>
 						</li>
-						<li><a href="http://localhost:8080/MyLibrary/Library.jsp">图书目库</a>
+						<li><a href="/getBooks.htm">图书目库</a>
 						</li>
 						<li><a href="#about">读者荐购</a>
 						</li>
-						<li><a href="http://localhost:8080/MyLibrary/myLibrary">我的图书馆</a>
+						<li><a href="/myLibrary.jsp">我的图书馆</a>
 						</li>
 					</ul>
 				</div>
@@ -59,14 +59,14 @@ body {
 	
 		<h3 style="color: rgb(226, 106, 39)">修改个人密码</h3>
 		
-		<form class="form-signin" action="ChangePasswd" method="post">
+		<form class="form-signin" action="changePasswd.htm" method="post">
   	
   	  	原密码 <input type="password" name="password"> <br>
   		新密码 <input type="password" name="newPassword"> <br>
   		确认密码<input type="password" name="repassword"> <br>
   		
   		<input class="btn btn-primary" type="submit" value="修 改">&nbsp;&nbsp;&nbsp;&nbsp;
-  		<a class="btn" href="http://localhost:8080/MyLibrary/myLibrary.jsp">返回</a>
+  		<a class="btn" href="/myLibrary.jsp">返回</a>
   		</form>
 
 		</div>

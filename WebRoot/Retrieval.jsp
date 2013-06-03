@@ -52,7 +52,7 @@ body {
 				<a class="brand">书目检索系统</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<li><a href="http://localhost:8080/MyLibrary/Retrieval.jsp">书目检索</a>
+						<li><a href="/Retrieval.jsp">书目检索</a>
 						</li>
 						<li><a href="#about">分类浏览</a>
 						</li>
@@ -60,11 +60,11 @@ body {
 						</li>
 						<li><a href="#contact">新书通报</a>
 						</li>
-						<li><a href="http://localhost:8080/MyLibrary/Library.jsp" target= "_blank">图书目库</a>
+						<li><a href="/getBooks.htm" >图书目库</a>
 						</li>
 						<li><a href="#about">读者荐购</a>
 						</li>
-						<li><a href="http://localhost:8080/MyLibrary/myLibrary" target= "_blank">我的图书馆</a>
+						<li><a href="/myLibrary.jsp" >我的图书馆</a>
 						</li>
 					</ul>
 				</div>
@@ -76,8 +76,7 @@ body {
 
 	<div id="content">
 		<div id="searchmain" style="text-align:center;">
-			<form action="Retrieval" method="get" 
-				onsubmit="return chkForm()" >
+			<form action="/searchBooks.htm" method="get">
 				<div>
 					<div id="saerch_center">
 						<h3>馆藏书目简单检索</h3>
@@ -107,26 +106,26 @@ body {
 						<p style="padding-left:10px;"></p>
 					</div>
 					<div id="hot_top_font">
-						<span id="top_ten"> 热门检索： <a href="Retrieval?strText=中国通史&strSearchType=title"
-							onclick="input_me('中国通史')">中国通史</a> | <a href="Retrieval?strText=营销&strSearchType=title"
-							onclick="input_me('营销')">营销</a> | <a href="Retrieval?strText=中国建筑&strSearchType=title"
-							onclick="input_me('中国建筑')">中国建筑</a> | <a href="Retrieval?strText=外贸&strSearchType=title"
-							onclick="input_me('外贸')">外贸</a> | <a href="Retrieval?strText=摄影&strSearchType=title"
-							onclick="input_me('摄影')">摄影</a> | <a href="Retrieval?strText=商务礼仪&strSearchType=title"
-							onclick="input_me('商务礼仪')">商务礼仪</a> | <a href="Retrieval?strText=营销案例&strSearchType=title"
+						<span id="top_ten"> 热门检索： <a href="/searchBooks.htm?strText=中国通史&strSearchType=title"
+							onclick="input_me('中国通史')">中国通史</a> | <a href="/searchBooks.htm?strText=营销&strSearchType=title"
+							onclick="input_me('营销')">营销</a> | <a href="/searchBooks.htm?strText=中国建筑&strSearchType=title"
+							onclick="input_me('中国建筑')">中国建筑</a> | <a href="/searchBooks.htm?strText=外贸&strSearchType=title"
+							onclick="input_me('外贸')">外贸</a> | <a href="/searchBooks.htm?strText=摄影&strSearchType=title"
+							onclick="input_me('摄影')">摄影</a> | <a href="/searchBooks.htm?strText=商务礼仪&strSearchType=title"
+							onclick="input_me('商务礼仪')">商务礼仪</a> | <a href="/searchBooks.htm?strText=营销案例&strSearchType=title"
 							onclick="input_me('营销案例')">营销案例</a> | 
-							<a href="Retrieval?strText=郁达夫&strSearchType=title"onclick="input_me('郁达夫')">郁<br>达夫</a> | <a href="Retrieval?strText=读大学&strSearchType=title"
-							onclick="input_me('读大学')">读大学</a> | <a href="Retrieval?strText=沉沦&strSearchType=title"
-							onclick="input_me('沉沦')">沉沦</a> | <a href="Retrieval?strText=国画&strSearchType=title"
-							onclick="input_me('国画')">国画</a> | <a href="Retrieval?strText=信心&strSearchType=title"
-							onclick="input_me('信心')">信心</a> | <a href="Retrieval?strText=小说&strSearchType=title"
-							onclick="input_me('小说')">小说</a> | <a href="Retrieval?strText=庄子&strSearchType=title"
-							onclick="input_me('庄子')">庄子</a> | <a href="Retrieval?strText=战争论&strSearchType=title"
-							onclick="input_me('战争论')">战争论</a> | <a href="Retrieval?strText=青春&strSearchType=title"
-							onclick="input_me('青春')">青春</a> | <a href="Retrieval?strText=赢&strSearchType=title"
-							onclick="input_me('赢')">赢</a> | <a href="Retrieval?strText=货币金融学&strSearchType=title"
-							onclick="input_me('货币金融学')">货币金融学</a> | <a href="Retrieval?strText=艺术&strSearchType=title"
-							onclick="input_me('艺术')"><br>艺术</a> | <a href="Retrieval?strText=电路与模拟电子技术&strSearchType=title"
+							<a href="/searchBooks.htm?strText=郁达夫&strSearchType=title"onclick="input_me('郁达夫')">郁<br>达夫</a> | <a href="/searchBooks.htm?strText=读大学&strSearchType=title"
+							onclick="input_me('读大学')">读大学</a> | <a href="/searchBooks.htm?strText=沉沦&strSearchType=title"
+							onclick="input_me('沉沦')">沉沦</a> | <a href="/searchBooks.htm?strText=国画&strSearchType=title"
+							onclick="input_me('国画')">国画</a> | <a href="/searchBooks.htm?strText=信心&strSearchType=title"
+							onclick="input_me('信心')">信心</a> | <a href="/searchBooks.htm?strText=小说&strSearchType=title"
+							onclick="input_me('小说')">小说</a> | <a href="/searchBooks.htm?strText=庄子&strSearchType=title"
+							onclick="input_me('庄子')">庄子</a> | <a href="/searchBooks.htm?strText=战争论&strSearchType=title"
+							onclick="input_me('战争论')">战争论</a> | <a href="/searchBooks.htm?strText=青春&strSearchType=title"
+							onclick="input_me('青春')">青春</a> | <a href="/searchBooks.htm?strText=赢&strSearchType=title"
+							onclick="input_me('赢')">赢</a> | <a href="/searchBooks.htm?strText=货币金融学&strSearchType=title"
+							onclick="input_me('货币金融学')">货币金融学</a> | <a href="/searchBooks.htm?strText=艺术&strSearchType=title"
+							onclick="input_me('艺术')"><br>艺术</a> | <a href="/searchBooks.htm?strText=电路与模拟电子技术&strSearchType=title"
 							onclick="input_me('电路与模拟电子技术')">电路与模拟电子技术</a> | <a
 							href="top100.php">more...</a>
 						</span>

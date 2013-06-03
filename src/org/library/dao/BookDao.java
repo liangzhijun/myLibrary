@@ -224,7 +224,7 @@ public class BookDao
 	 * 从数据库遍历书籍，检索。返回一本书籍的信息
 	 * @return
 	 */
-	public static List<Book> retrieval(String strText, String strSearchType)
+	public static List<Book> search(String strText, String strSearchType)
 	{
 		ResultSet rs = null;
 		Statement stmt = null;
