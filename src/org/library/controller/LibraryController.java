@@ -52,7 +52,6 @@ public class LibraryController
 	public String getBooks(Model model)
 	{
 		List<Book> list = BookDao.findBooks();
-
 		model.addAttribute("list", list);
 		return "books";
 	}
@@ -64,14 +63,14 @@ public class LibraryController
 	 * @return "bookinfo.jsp"
 	 */
 	@RequestMapping(value = "/bookinfo.htm")
-	public String bookinfo(@RequestParam String title, Model model)
+	public String bookinfo(@RequestParam String barcode,@RequestParam String title, Model model)
 	{
-		Book book = BookDao.getBookinfo(title);
+		Book book = BookDao.getBookinfo(barcode);
 		List<Book> list = BookDao.bookinfos(title);
 
 		model.addAttribute("book", book);
 		model.addAttribute("list", list);
-
+		
 		return "bookinfo";
 	}
 }
